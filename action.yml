@@ -1,0 +1,24 @@
+name: 'Setup PDK'
+description: 'Sets up the MuleSoft Flex Gateway PDK CLI tools'
+branding:
+  icon: 'cloud'
+  color: 'blue'
+inputs:
+  connected-app-id:
+    required: false
+    description: Connected app client id - used to authenticate Anypoint CLI
+  connected-app-secret:
+    required: false
+    description: Connected app client secret - used to authenticate Anypoint CLI
+  username:
+    required: false
+    description: Username - used to authenticate Anypoint CLI
+  password:
+    required: false
+    description: Password - used to authenticate Anypoint CLI
+  organization-id:
+    required: true
+    description: Anypoint org id
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
